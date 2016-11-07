@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="themes/myTheme.min.css" />
+	<link rel="stylesheet" href="themes/mycss.css"/> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	
+<title>Movie Reviews</title>	
+</head>
+
+
+<body>
+
+	<div id="container"	>
+
+		<div data-role="page" id="home" >
+			<!-- create a left side panel and content of panel -->
+			<div data-role="panel" class="panel left" id="myPanel">
+				<div data-role="header">
+					<h1>About Us</h1>
+				</div>
+					<div data-role="content">
+												
+					<a href="#home" data-rel="close" data-role="button"   class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-home " >Back to Home</a>			
+				</div> 
+			</div>
+
+			<div data-role="header">
+				<h1>Movie Reviews</h1>
+					<a href="#myPanel"  class="ui-btn ui-btn-left ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-arrow-l ">More</a>
+			</div> 
+
+			<div data-role="content">
+				<div class="content-primary">
+					<div data-demo-html="true">		
+						<p>Select a movie to find out more.  Read our expert's review,  user reviews and post your own!</p>
+										
+						<ul data-role="listview" data-inset="true"  data-filter="true"  data-filter-placeholder="Search movies..." class="myList" >  					
+						</ul>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>	<!-- end #home -->
+			
+		<div data-role="page" id="formpage"> 
+			<div id="form">
+				<h3>Post a Review!</h3>
+  				<form method="post" action="php/formhandler.php" class="test" id="myform" rel="external" data-ajax="false">
+    		    
+      			<label for="usrnm" >Username:</label>
+      			<input type="text" name="user" id="usrnm" placeholder="Username" data-clear-btn="true">
+      			<label for="text" >Review:</label>
+     		    <textarea name="text" id="text" placeholder="Write your review here..."></textarea>
+     		    <input type="submit" id="insert" value="Submit">
+    		
+  				</form>
+  				<a href="#home" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-back backBtn">Back to Home</a>
+			</div>
+			
+
+		</div>
+
+
+
+	</div><!--container -->
+
+	
+
+	
+
+
+
+
+
+</body>
+
+
+</html>
